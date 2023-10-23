@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Título en la parte superior -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Página principal"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Subrayado debajo del título -->
+    <View
+        android:layout_width="150dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="#366ace"
+        android:layout_gravity="center" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:visibility="invisible"
+        android:id="@+id/feedback"
+     >
+
+        <!-- Avisar sobre la restricción de caracteres -->
+        <TextView
+            android:id="@+id/charLimitTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Máximo 250 caracteres"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Caja de texto estilizada -->
+        <EditText
+            android:id="@+id/commentEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:height="300dp"
+            android:hint="Escribe tus comentarios aquí"
+            android:maxLength="250"
+            android:inputType="textMultiLine"
+            android:gravity="top|start" />
+
+
+        <!-- Botón para enviar comentarios -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sendCommentButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Enviar Comentarios"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/success_button" />
+
+    </LinearLayout>
+
+
+    <!-- Botones en la parte inferior -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <!-- Botón Descargar Horarios -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/downloadScheduleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Descargar Horarios"
+            android:textColor="@color/white"
+            android:layout_marginEnd="8dp"
+        android:background="@drawable/custom_button" />
+
+        <!-- Botón Feedback -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/feedbackButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Feedback"
+            android:textColor="@color/white"
+            android:layout_marginStart="8dp"
+        android:background="@drawable/custom_button" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

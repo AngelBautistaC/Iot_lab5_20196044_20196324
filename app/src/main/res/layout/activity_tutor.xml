@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Título en la parte superior -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Página principal"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Subrayado debajo del título -->
+    <View
+        android:layout_width="150dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="#366ace"
+        android:layout_gravity="center" />
+
+
+
+
+
+    <!-- Botones en la parte inferior -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.iot_lab5.ListadoFragment"
+        tools:layout='@layout/fragment_listado'
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <!-- Botón Descargar Horarios -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/listadoButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Listado Trabajadores"
+            android:textColor="@color/white"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/custom_button" />
+
+        <!-- Botón Descargar Horarios -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/trabajadorButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Buscar Trabajador"
+            android:textColor="@color/white"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/custom_button" />
+
+        <!-- Botón Feedback -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tutoriaButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Asignar Tutoría"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Texto para indicar al usuario que ingrese el código del tutor -->
+    <TextView
+        android:id="@+id/instructionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Por favor, ingrese el código del usuario que desea buscar"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Campo de texto para ingresar el código del tutor -->
+    <EditText
+        android:id="@+id/tutorCodeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código del usuario"
+        android:inputType="number"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón para descargar la lista de trabajadores -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/downloadButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Descargar Información"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_button"/>
+
+</LinearLayout>

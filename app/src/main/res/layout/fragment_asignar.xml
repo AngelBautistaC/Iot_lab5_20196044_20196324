@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Texto para indicar al usuario que ingrese el código del tutor -->
+    <TextView
+        android:id="@+id/instructionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Por favor, ingrese los códigos necesarios"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Campo de texto para ingresar el código del tutor -->
+    <EditText
+        android:id="@+id/tutorCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código TUTOR"
+        android:inputType="number"
+        android:layout_marginBottom="16dp" />
+    <EditText
+        android:id="@+id/empleadoCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código EMPLEADO"
+        android:inputType="number"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón para descargar la lista de trabajadores -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/downloadButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Crear Tutoría"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_button"/>
+
+</LinearLayout>
