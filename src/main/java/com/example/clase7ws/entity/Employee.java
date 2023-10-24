@@ -54,6 +54,15 @@ public class Employee {
     @Column(name = "department_id")
     private Integer departmentId;
 
+    @Column(name = "meeting", nullable = false)
+    private Integer meeting;
+
+    @Column(name = "meeting_date")
+    private Instant meetingDate;
+
+    @Column(name = "employee_feedback", length = 250)
+    private String employeeFeedback;
+
 
     @Override
     public boolean equals(Object o) {
